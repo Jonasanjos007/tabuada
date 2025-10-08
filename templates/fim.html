@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Fim do Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <video id="bg-video" autoplay muted loop>
+    <source src="video_animado.mp4" type="video/mp4">
+  </video>
+  <video id="bg-video" autoplay muted loop>
+    <source src="static/video/video_animado.mp4" type="video/mp4">
+  </video>
+  <div class="fim body_fim">
+    <div class="container_fim">
+        <h1>🎉 Fim do Quiz!</h1>
+        <p>✅ Acertos: <strong>{{ acertos }}</strong></p>
+        <p>❌ Erros: <strong>{{ erros }}</strong></p>
+
+        <a href="/reiniciar" class="reiniciar">🔁 Jogar Novamente</a>
+    </div>
+    </div>
+</body>
+</html>

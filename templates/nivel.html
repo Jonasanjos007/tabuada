@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Escolha o Nível</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 Escolha o Nível de Dificuldade</h1>
+
+        <form action="/iniciar" method="post" class="options">
+            <button type="submit" name="nivel" value="leve">🟢 Leve (1 a 10)</button>
+            <button type="submit" name="nivel" value="medio">🟡 Médio (20 a 40)</button>
+            <button type="submit" name="nivel" value="dificil">🟠 Difícil (50 a 70)</button>
+            <button type="submit" name="nivel" value="hard">🔴 Hard (81 a 99)</button>
+        </form>
+    </div>
+</body>
+</html>

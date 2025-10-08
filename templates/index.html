@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz de Matemática</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<style>
+ 
+
+</style>
+<body>
+  <video id="bg-video" autoplay muted loop>
+    <source src="video_animado.mp4" type="video/mp4">
+  </video>
+  <video id="bg-video" autoplay muted loop>
+    <source src="static/video/video_animado.mp4" type="video/mp4">
+  </video>
+  <div class="body">
+    <div class="container">
+        <h1>🧮 Quiz de Matemática</h1>
+
+        <div class="status">
+            <p>Pergunta <strong>{{ num_pergunta }}</strong> / 10</p>
+            <p>✅ Acertos: {{ acertos }} | ❌ Erros: {{ erros }}</p>
+        </div>
+
+        <div class="question">
+            <h2>Quanto é <span>{{ pergunta.num1 }}</span> {{ pergunta.operador }} <span>{{ pergunta.num2 }}</span> ?</h2>
+        </div>
+
+        {% if mensagem %}
+        <div class="mensagem">{{ mensagem }}</div>
+        {% endif %}
+
+        <form action="/responder" method="post" class="options">
+            {% for opcao in pergunta.opcoes %}
+                <button type="submit" name="resposta" value="{{ opcao }}">{{ opcao }}</button>
+            {% endfor %}
+        </form>
+
+        <a href="/reiniciar" class="reiniciar">🔄 Reiniciar</a>
+    </div>
+    </div>
+</body>
+</html>

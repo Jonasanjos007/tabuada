@@ -1,0 +1,178 @@
+ /* === RESET === */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ video#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Fica atrás do conteúdo */
+  filter: blur(px); /* 👈 Desfoque de 8 pixels */
+}
+
+/* === BODY === */
+.body_fim{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* === CONTAINER === */
+.container_fim{
+      color: #ffffff;
+    background-color: #251f1f;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.0s ease;
+}
+.container {
+    color: #ffffff;
+    background-color: #251f1f;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 1.0s ease;
+}
+
+/* === TITULO === */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    
+}
+
+/* === STATUS === */
+.status {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* === PERGUNTA === */
+.question {
+    margin: 20px 0;
+}
+
+.question h2 {
+    font-size: 1.4rem;
+}
+
+.question span {
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+/* === BOTÕES DE RESPOSTA === */
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.options button {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff33;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.options button:hover {
+    background: #fff;
+    color: #2196f3;
+    transform: scale(1.05);
+}
+
+/* === MENSAGEM === */
+.mensagem {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease;
+}
+
+/* === BOTÃO REINICIAR === */
+.reiniciar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #fff;
+    color: #2196f3;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.reiniciar:hover {
+    background: #2196f3;
+    color: #fff;
+    transform: scale(1.05);
+}
+@media (min-width: 450px) {
+    .container {
+    border-radius: 20px;
+    padding: 100px 40px;
+    font-size: 40px;
+}
+.status {
+    font-size: 3rem;
+    margin-bottom: 100px;
+    margin: 40px 0 0 0 ;
+}
+.question h2 {
+    font-size: 3rem;
+}
+.options button {
+    font-size: 3.2rem;
+}
+h1 {padding: 0;
+    font-size: 5rem;
+    margin-bottom: 15px;
+}
+.reiniciar {
+    margin-top: 50px;
+    padding: 30px 50px;
+    font-size: 50px;
+}
+.mensagem {
+    font-size: 2.1rem;
+    margin:  0 0 40px 0;
+}
+.options button:hover {
+    background: #fff;
+    color: #2196f3;
+    transform: scale(1.05);
+}
+
+}
+/* === ANIMAÇÃO === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
